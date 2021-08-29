@@ -25,8 +25,8 @@ node{
    }
    stage('Nexus Image Push'){
    sh "docker login -u admin -p admin123 3.108.217.222:8083"
-   sh "docker tag mycard/myweb:0.0.5 3.108.217.222:8083/d:1.0.0"
-   sh 'docker push 3.108.217.222:8083/mycard:1.0.0'
+   sh "docker tag mycard/myweb:0.0.5 3.108.217.222:8083/demo:.0.0.5"
+   sh 'docker push 3.108.217.222:8083/demo:0.0.5'
    }
    stage('Remove Previous Container'){
 	try{
